@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SignupActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_bg"
+        android:paddingTop="0dp">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/back"
+            android:background="@android:color/transparent"
+            android:id="@+id/backIb"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@id/backIb"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"/>
+    </RelativeLayout>
+
+    <!--  card view   -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="6dp"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="8dp"
+        android:layout_centerInParent="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_text"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="25dp"
+                android:textAllCaps="true"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/edt_style"
+                android:drawableStart="@drawable/home"
+                android:drawablePadding="15dp"
+                android:hint="Enter your name"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/edtUsernameR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/edt_style"
+                android:drawableStart="@drawable/person"
+                android:drawablePadding="15dp"
+                android:hint="Enter username"
+                android:padding="10dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter password"
+                android:layout_margin="8dp"
+                android:background="@drawable/edt_style"
+                android:padding="10dp"
+                android:drawableStart="@drawable/key"
+                android:drawablePadding="15dp"
+                android:id="@+id/edtPasswordR"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Please confirm password"
+                android:layout_margin="8dp"
+                android:background="@drawable/edt_style"
+                android:padding="10dp"
+                android:drawableStart="@drawable/key"
+                android:drawablePadding="15dp"
+                android:id="@+id/edtConfirmPassword"/>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:text="Create account"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:id="@+id/btnSignup"/>
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvLogin"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/already_user_text"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:textSize="13sp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:textColor="@color/black"/>-->
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

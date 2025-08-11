@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/card_bg"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+
+        >
+        <!-- author id -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvId"
+            android:text="2"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="7dp"
+            android:textSize="20sp"/>
+
+        <!-- Book name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvBookName"
+            android:text="Book name"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="25dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:textSize="20sp"
+            android:layout_toEndOf="@id/tvId"/>
+
+
+        <!-- book price -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvBookPrice"
+            android:text="288/-"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="25dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="7dp"
+            android:textSize="15sp"
+            android:layout_toEndOf="@id/tvId"
+            android:layout_below="@id/tvBookName"/>
+
+        <!-- book author contact  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAuthorContact"
+            android:text="37373737"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="25dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="7dp"
+            android:textSize="15sp"
+            android:layout_toEndOf="@id/tvId"
+            android:layout_below="@id/tvBookPrice"/>
+
+        <!-- book author name  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAuthorName"
+            android:text="Denis"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="25dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="7dp"
+            android:textSize="15sp"
+            android:layout_toEndOf="@id/tvId"
+            android:layout_below="@id/tvAuthorContact"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">firstApp</string>
+    <string name="name">Welcome to android</string>
+    <string name="rupee_string">enter rupee amount</string>
+</resources>

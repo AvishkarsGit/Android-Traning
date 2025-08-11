@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">E-BookStore</string>
+    <string name="login_text"><b>Welcome, Please login</b></string>
+    <string name="register_text"><b>Create your account</b></string>
+    <string name="forgot_text"><b>Forgot Password ? </b></string>
+    <string name="signup_text">New user ? <b>Register</b></string>
+    <string name="already_user_text">Already user ? <b>Login</b></string>
+</resources>

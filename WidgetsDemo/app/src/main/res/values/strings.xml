@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Widgets Demo</string>
+    <string name="register_text">Already have an account ? <b>Login</b></string>
+</resources>
