@@ -2,9 +2,13 @@ package com.avishkar.e_bookstore;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -32,9 +36,10 @@ public class HomeActivity extends AppCompatActivity {
     private ImageButton logoutIb;
     private Button btnAddNewBook;
     private RecyclerView recyclerBook;
-    private ArrayList<BooksModel> booksList;
+    private ArrayList<BooksModel> booksList,filterList;
     private BooksAdapter adapter;
     private DBHelper helper;
+    private EditText searchEdt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,10 +75,30 @@ public class HomeActivity extends AppCompatActivity {
         //load data from database
         loadData();
 
+        searchEdt.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                ArrayList<BooksModel> filtered = helper.searchBooks(s.toString());
+                adapter.updateList(filtered);
+            }
+        });
+
     }
 
+
     private void loadData() {
-        booksList = helper.getAllBooks();
+        filterList = helper.searchBooks(""); //load initially
+        booksList = filterList;
         adapter = new BooksAdapter(HomeActivity.this,booksList);
         recyclerBook.setAdapter(adapter);
 
@@ -96,9 +121,11 @@ public class HomeActivity extends AppCompatActivity {
 
         logoutIb = findViewById(R.id.logoutIb);
         btnAddNewBook = findViewById(R.id.btnAddNewBook);
+        searchEdt = findViewById(R.id.searchEdt);
 
         //arraylist
         booksList = new ArrayList<>();
+        filterList = new ArrayList<>();
 
 
         // recycler view initialization

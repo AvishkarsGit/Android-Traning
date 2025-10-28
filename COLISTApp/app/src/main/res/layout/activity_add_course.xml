@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.AddCourseActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg"
+        android:id="@+id/toolbarRl">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Course"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:layout_marginTop="60dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="150dp"
+        android:id="@+id/cv">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/loginLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <!-- title -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/primary"
+                    android:layout_marginTop="20dp">
+
+                    <EditText
+                        android:id="@+id/courseNameEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Course Titile"
+                        android:textColor="@color/black"
+                        android:drawableStart="@drawable/title"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:background="@drawable/shape_edittext"
+                        android:ems="10"
+                        android:layout_margin="20dp"/>
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- description -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/primary"
+                    android:layout_marginTop="20dp">
+
+                    <EditText
+                        android:id="@+id/courseDescriptionEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Course Description"
+                        android:textColor="@color/black"
+                        android:drawableStart="@drawable/description"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:background="@drawable/shape_edittext"
+                        android:ems="10"
+                        android:layout_margin="20dp"/>
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- instructor -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/primary"
+                    android:layout_marginTop="20dp">
+
+                    <EditText
+                        android:id="@+id/courseInstructorEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Course Author Name"
+                        android:textColor="@color/black"
+                        android:drawableStart="@drawable/person"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:background="@drawable/shape_edittext"
+                        android:ems="10"
+                        android:layout_margin="20dp"/>
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- contact -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/primary"
+                    android:layout_marginTop="20dp">
+
+                    <EditText
+                        android:id="@+id/courseInstructorContactEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Course Author Contact"
+                        android:textColor="@color/black"
+                        android:drawableStart="@drawable/contact"
+                        android:drawablePadding="10dp"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:background="@drawable/shape_edittext"
+                        android:ems="10"
+                        android:layout_margin="20dp"/>
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- contact -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/primary"
+                    android:layout_marginTop="20dp">
+
+                    <EditText
+                        android:id="@+id/coursePriceEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Course Price"
+                        android:textColor="@color/black"
+                        android:drawableStart="@drawable/rupee"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:inputType="number"
+                        android:background="@drawable/shape_edittext"
+                        android:ems="10"
+                        android:layout_margin="20dp"/>
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_shape02"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Save"
+                    android:textStyle="bold"
+                    android:elevation="5dp"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="20dp"
+                    android:textSize="14dp"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

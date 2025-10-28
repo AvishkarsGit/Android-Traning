@@ -68,4 +68,10 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksHolder> {
     public int getItemCount() {
         return booksList.size();
     }
+
+    public void updateList(ArrayList<BooksModel> newList) {
+        booksList = newList;
+        notifyDataSetChanged();
+    }
+
 }

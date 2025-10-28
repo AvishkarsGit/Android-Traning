@@ -41,16 +41,29 @@
 
     </RelativeLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <EditText
+        android:id="@+id/searchEdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/toolbarRL"
-        android:layout_above="@id/btnAddNewBook"
-        android:layout_margin="5dp"
-        android:id="@+id/recyclerBook"/>
+        android:background="@drawable/edt_style"
+        android:hint="Search here..."
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/toolbarRL"/>
 
 
     <!--  add new book button -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnAddNewBook"
+        android:layout_below="@id/searchEdt"
+        android:layout_margin="5dp"
+        android:layout_marginTop="5dp"
+        tools:listitem="@layout/books_row_layout"
+        android:layout_marginBottom="15dp" />
+
     <Button
         android:id="@+id/btnAddNewBook"
         android:layout_width="match_parent"

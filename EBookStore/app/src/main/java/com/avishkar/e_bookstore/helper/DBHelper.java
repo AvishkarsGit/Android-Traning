@@ -123,7 +123,6 @@ public class DBHelper extends SQLiteOpenHelper {
             return false;
         }
 
-//        return rows > 0; //simplify if-else
 
     }
 
@@ -132,6 +131,29 @@ public class DBHelper extends SQLiteOpenHelper {
         int rows = db.delete(Constant.TABLE_BOOKS,Constant.COL_BOOK_ID+" = "+id,null);
         return rows > 0;
     }
+
+    public ArrayList<BooksModel> searchBooks(String keyword) {
+        ArrayList<BooksModel> booksList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM "+Constant.TABLE_BOOKS+" WHERE "+Constant.COL_BOOK_NAME+" LIKE ? OR "+Constant.COL_AUTHOR_NAME+" LIKE ?",new String[]{"%"+keyword+"%","%"+keyword+"%"});
+        if (cursor.moveToFirst()) {
+            do {
+                BooksModel model = new BooksModel();
+                model.setId(cursor.getInt(cursor.getColumnIndexOrThrow(Constant.COL_BOOK_ID)));
+                model.setBookName(cursor.getString(cursor.getColumnIndexOrThrow(Constant.COL_BOOK_NAME)));
+                model.setAuthorName(cursor.getString(cursor.getColumnIndexOrThrow(Constant.COL_AUTHOR_NAME)));
+                model.setAuthorContact(cursor.getString(cursor.getColumnIndexOrThrow(Constant.COL_AUTHOR_CONTACT)));
+                model.setPrice(cursor.getString(cursor.getColumnIndexOrThrow(Constant.COL_BOOK_PRICE)));
+
+                booksList.add(model);
+            }while (cursor.moveToNext());
+
+        }
+        return booksList;
+     }
+
+
+
 
 
 }

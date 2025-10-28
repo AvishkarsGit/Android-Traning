@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    tools:context=".MainActivity">
+
+
+    <!--  toolbar   -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbarRl"
+        android:elevation="3dp"
+        android:background="@drawable/toolbar_shape01">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home Page"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="17sp"
+            android:textColor="@color/black"/>
+
+        <ImageButton
+            android:id="@+id/logoutIb"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/logout"
+            android:background="@android:color/transparent"/>
+
+    </RelativeLayout>
+
+
+    <!--  course list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/courseListRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarRl"
+        android:layout_above="@id/btnAddNewCourse"
+        android:layout_margin="5dp"/>
+
+    <!--  Button add new course   -->
+    <Button
+        android:id="@+id/btnAddNewCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_shape02"
+        android:text=" + Add new Course"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_margin="7dp"/>
+
+
+</RelativeLayout>
